@@ -6,9 +6,12 @@
 #    By: rnakai <rnakai@student.42tokyo.jp>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/04 13:56:35 by rnakai            #+#    #+#              #
-#    Updated: 2021/01/04 13:59:50 by rnakai           ###   ########.fr        #
+#    Updated: 2021/01/09 23:03:17 by rnakai           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+postgreSQLを起動する
+sudo service postgresql start
 
 railsのひな形作成
 rails [_version_] new [app_name] [option]
