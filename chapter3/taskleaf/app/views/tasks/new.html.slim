@@ -1,6 +1,6 @@
 h1 Register new task
-/ .nav.justify-content-end
-	= link_to 'list', task_path, class: 'nav-link'
+.nav.justify-content-end
+	= link_to 'index_list', root_path, class: 'nav-link'
 
 = form_with model: @task, local: true do |f|
 	.form-group
