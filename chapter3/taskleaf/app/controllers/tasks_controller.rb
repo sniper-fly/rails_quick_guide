@@ -21,6 +21,12 @@ class TasksController < ApplicationController
 	redirect_to tasks_url, notice: "registerd task [#{task.name}]"
   end
 
+  def destroy
+	task = Task.find(params[:id])
+	task.destroy
+	redirect_to tasks_url, notice: "Task [#{task.name}] was deleted."
+  end
+
   def create
 	task = Task.new(task_params)
 	task.save!
