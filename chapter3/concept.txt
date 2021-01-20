@@ -25,3 +25,25 @@ bootstrapのcssクラスなどをいちいち各slimファイルの中でimport�
 クラス名はキャメル、テーブル名はスネークケース
 
 ex)クラス名Task --> データベーステーブル名　tasks
+
+モデルを作成するコマンド
+bin/rails g model [model name] [property name: data type .....] [option]
+ex) bin/rails g model Task name:string description:text
+
+マイグレーション
+https://www.transnet.ne.jp/2015/12/29/rails%E5%88%9D%E5%BF%83%E8%80%85%E3%81%8C%E3%81%A4%E3%81%BE%E3%81%9A%E3%81%8D%E3%82%84%E3%81%99%E3%81%84%E3%80%8C%E3%83%9E%E3%82%A4%E3%82%B0%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%80%8Dcolnr/
+
+SQLを書くことなくRubyでデータベースにテーブルを作成できる機能。
+
+bin/rails db:migrate
+しかし、エラーが発生。
+既にtasksテーブルがあるよと怒られる。
+プロジェクトごとにデータベースがあるわけではなく、
+おおもとのpostgresqlにデータベースが集約されているから。
+
+https://www.sejuku.net/blog/27728
+resourcesとは
+
+psqlコマンドまとめ
+https://dev.classmethod.jp/articles/postgresql-organize-command/
+
