@@ -20,4 +20,5 @@ table.table.table-hover
 			th= Task.human_attribute_name(:updated_at)
 			td= @task.updated_at
 = link_to 'edit page', edit_task_path, class: 'btn btn-primary mr-3'
+= link_to 'delete', @task, method: :delete, data: {confirm: "Is it OK to delete task #{@task.name}?"}, class: 'btn btn-danger'
 / p Find me in app/views/tasks/show.html.slim

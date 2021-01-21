@@ -29,6 +29,12 @@ class TasksController < ApplicationController
 	redirect_to tasks_url, notice: "updated task #{task.name}."
   end
 
+  def destroy
+	task = Task.find(params[:id])
+	task.destroy
+	redirect_to tasks_url, notice: "Successfully deleted task #{task.name}."
+  end
+
   private
 
   def task_params
