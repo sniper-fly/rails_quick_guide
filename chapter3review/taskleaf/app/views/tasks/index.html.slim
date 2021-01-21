@@ -13,5 +13,7 @@ table.table.table-hover
 			tr
 				td= link_to task.name, task_path(task)
 				td= task.created_at
+				td
+					= link_to 'edit page', edit_task_path(task), class: 'btn btn-primary mr-3'
 
 / p Find me in app/views/tasks/index.html.slim
