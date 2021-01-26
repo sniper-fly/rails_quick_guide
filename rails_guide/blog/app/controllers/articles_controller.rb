@@ -24,6 +24,20 @@ class ArticlesController < ApplicationController
 		# render plain: params[:article].inspect
 	end
 
+	def update
+		@article = Article.find(params[:id])
+
+		if @article.update(article_params)
+			redirect_to @article
+		else
+			render 'edit'
+		end
+	end
+
+	def edit
+		@article = Article.find(params[:id])
+	end
+
 
 	private
 		def article_params
