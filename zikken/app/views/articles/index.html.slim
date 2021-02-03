@@ -1,0 +1,15 @@
+h1 hello, world!
+
+= link_to  "create new", new_article_path()
+table
+	thead
+		tr
+			th title
+			th description
+	tbody
+		- @articles.each do |article|
+			tr
+				td= link_to article.title, article_path(article)
+				td= article.description
+				td= link_to 'Edit', edit_article_path(article)
+				td= link_to 'Delete', article_path(article), method: :delete 

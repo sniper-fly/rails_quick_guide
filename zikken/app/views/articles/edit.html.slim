@@ -1,0 +1,9 @@
+h1 let's edit new page!
+
+= link_to 'Back to home', articles_path
+= form_with model: @article, local: true do |form|
+	p title
+	p= form.text_field :title
+	p description
+	p= form.text_field :description
+	p= form.submit

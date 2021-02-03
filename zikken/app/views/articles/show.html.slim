@@ -1,0 +1,10 @@
+= link_to 'Back to home', articles_path
+
+h2 title
+= @article.title
+
+h2 description
+= @article.description
+
+p= link_to 'Edit this page', edit_article_path(@article)
+p= link_to 'Delete this page', article_path(@article), method: :delete
